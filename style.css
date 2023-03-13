@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+  overflow-x: hidden;
+}
+
+ul,
+.nav--section {
+  display: flex;
+  column-gap: 30px;
+  list-style-type: none;
+  font-weight: 700;
+}
+
+.nav--section {
+  padding: 2rem;
+  column-gap: 40%;
+}
+
+.nav--section img {
+  object-fit: contain;
+}
+
+.list {
+  position: fixed;
+  padding: 2rem;
+  top: 0;
+  left: 0;
+
+  right: 0;
+  background: white;
+  z-index: 999;
+  transform: translateY(-500px);
+  transition: transform 0.5s;
+}
+
+.list--active {
+  transform: translateY(1px);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(39, 38, 38, 0.4);
+  display: none;
+}
+
+.overlay--active {
+  display: block;
+}
+
+.img--slides {
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+}
+.logo,
+.menu,
+.btn {
+  cursor: pointer;
+}
+
+.slider {
+  position: relative;
+  max-width: 1000px;
+  overflow: hidden;
+  top: -75px;
+  z-index: -99;
+  height: 300px;
+}
+
+.slide {
+  position: absolute;
+  /* top: -30px; */
+  transition: transform 0.5s;
+}
+
+.slide img,
+.middle-section img {
+  width: 100vw;
+  height: 300px;
+}
+
+.btns {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background: black;
+}
+.btn--active {
+  background: hsl(0, 0%, 63%);
+}
+.img--contents {
+  padding: 0 2rem;
+}
+
+h4 {
+  letter-spacing: 7px;
+}
+p {
+  line-height: 20px;
+  color: hsl(0, 0%, 63%);
+}
+
+.img--content {
+  display: none;
+}
+
+.img--content__active {
+  display: block;
+}
+
+.middle-img__det {
+  padding: 2rem;
+}
+#close {
+  margin-bottom: -30px;
+}
+@media screen and (min-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  .list {
+    position: static;
+    padding: 0;
+    color: white;
+    background: none;
+
+    transform: translateY(0);
+  }
+  .nav--section {
+    column-gap: 50px;
+    /* padding: 0 2rem; */
+  }
+
+  .section {
+    display: flex;
+    height: 420px;
+  }
+  .middle-section {
+    display: flex;
+
+    overflow: hidden;
+  }
+  .middle-section img {
+    width: 30vw;
+  }
+
+  .slider {
+    top: -120px;
+    height: 450px;
+    width: 55vw;
+  }
+
+  .img--contents {
+    height: fit-content;
+    padding: 5rem 4rem;
+  }
+  .slide {
+    width: 100%;
+    height: 430px;
+  }
+  .slide__1 {
+    content: url(/images/desktop-image-hero-1.jpg);
+  }
+  .slide__2 {
+    content: url(/images/desktop-image-hero-2.jpg);
+  }
+  .slide__3 {
+    content: url(/images/desktop-image-hero-3.jpg);
+  }
+  .btns {
+    left: 55vw;
+    top: 55%;
+  }
+}
