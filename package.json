@@ -2,7 +2,7 @@
   "name": "new-challenge-dec-21",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "defualt": "script.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"
